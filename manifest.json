@@ -1,0 +1,19 @@
+{
+    "name": "CleanTube",
+    "version": "1.0.0",
+    "description": "Delete reels and any distracting elements from Youtube",
+    "manifest_version": 3,
+    "author": "Aitor Pérez",
+    "permissions": ["storage"],
+    "host_permissions": ["https://www.youtube.com/*"],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "CleanTube"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}
